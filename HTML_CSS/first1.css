@@ -1,0 +1,24 @@
+#p1 {
+    color: blue;
+}
+
+body {
+    background-color: black;
+}
+
+.options {
+    color:blueviolet
+}
+
+#myid {
+    background-color: blue;
+}
+
+button {
+    background-color: green;
+    font-family: cursive;
+}
+
+* {
+    font-family: 'Times New Roman', Times, serif;
+}

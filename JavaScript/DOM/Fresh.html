@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM</title>
+</head>
+<body style="background-color: #212121; color: white;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    //Create
+    function addLanguage(langName) {
+        const li = document.createElement("li")
+        li.innerHTML = `${langName}`
+        document.querySelector(".language").appendChild(li);
+    }
+    addLanguage("Python")
+    addLanguage("TypeScript")
+
+    function optimize(langName) {
+        const li = document.createElement("li")
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector(".language").appendChild(li)
+    }
+    optimize("C++")
+
+    //Update
+    const secondLanguage = document.querySelector("li:nth-child(2)")
+    // secondLanguage.innerHTML = "Mojo"; not optimal option
+    const newli = document.createElement("li")
+    newli.textContent = "JoJo"
+    secondLanguage.replaceWith(newli)
+
+    const firstLanguage = document.querySelector("li:nth-child(1)")
+    firstLanguage.outerHTML= "<li>TypeScript</li>"
+
+
+    //remove
+    const newLanguage = document.querySelector("li:first-child")
+    newLanguage.remove()
+</script>
+</html>

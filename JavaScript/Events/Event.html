@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Events</title>
+</head>
+<body style="background-color: #212121; color: white;">
+    <h2>Amazing Images</h2>
+    <div>
+        <ul id="images">
+            <li><img width ="200px" src="https://cdn.pixabay.com/photo/2016/05/05/02/37/sunset-1373171_1280.jpg" id="Scene"></li>
+            <li><img width ="200px" src="https://cdn.pixabay.com/photo/2016/05/05/02/37/sunset-1373171_1280.jpg" id="Scene1"></li>
+            <li><img width ="200px" src="https://cdn.pixabay.com/photo/2016/05/05/02/37/sunset-1373171_1280.jpg" id="Scene2"></li>
+            <li><img width ="200px" src="https://cdn.pixabay.com/photo/2016/05/05/02/37/sunset-1373171_1280.jpg" id="Scene3"></li>
+            <li><a id="google" href="https://google.com" style="color: white;">Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    document.getElementById("Scene1").onclick = function () {
+        alert("Scene1")
+    }
+
+    document.getElementById("Scene2").addEventListener("click", function (e) {
+        alert("Scene2")
+    },false);
+
+    document.getElementById("images").addEventListener("click", function (e) {
+        console.log("Inside ul");
+    });
+    
+    document.getElementById("Scene3").addEventListener("click", function (e) {
+        console.log("Inside Scene 3 ");
+        e.stopPropagation()
+    });
+
+    document.getElementById("google").addEventListener("click", function (e) {
+        e.preventDefault()
+        e.stopPropagation()  // stops bubbling
+        console.log("google clicked");
+    },false);
+    
+    document.getElementById("images").addEventListener("click",function (e) {
+        e.preventDefault()
+        if(e.target.tagName === "IMG"){
+            e.target.parentNode.remove()
+        }
+    })
+
+</script>
+</html>

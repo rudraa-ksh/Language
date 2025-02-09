@@ -1,1 +1,0 @@
-print("Hello Rudra") #It seems like it is similar to python

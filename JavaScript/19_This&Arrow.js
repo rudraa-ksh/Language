@@ -17,6 +17,6 @@ const animal = () => {
     console.log(this.username);
 }
 
-//const animal = () => (consoole.log("Tiger"))
+//const animal = () => (consoole.log("Tiger")) implicit return
 
 animal()

@@ -18,6 +18,7 @@ else{
     console.log("False");
 }
 
+// && and operator || or operator in javascript
 
 //Shortend Notation
 
@@ -36,7 +37,7 @@ else{
 
 switch (2) {
     case 1:
-        console.log("January");
+        console.log("January");   //In this if we remove break statement then it will execute the code of all cases below except the default case.
         break;
     case 2:
         console.log("February");
@@ -48,7 +49,7 @@ switch (2) {
 
 
 //Falsy Value
-false, 0, -0, BigInt, 0n, "", null, NaN, undefined
+//false, 0, -0, BigInt  0n, "", null, NaN, undefined
 
 //All other are truthy value
 " ",[],{}, function(){}

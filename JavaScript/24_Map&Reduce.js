@@ -31,8 +31,21 @@ console.log(Integers);
 
 //chaining
 const mynum = Num
-    .map((num) => num*10 )
-    .map((num) => num +1 )
+    .map((num) => num*10 )  
+    .map((num) => num +1 ) //this will take values from previously opearted method
     .filter((num) => num>=40)
 
 console.log(mynum);
+
+//reduce using arrow function
+const mynums = [1,2,3,4]
+let out = mynums.reduce((acc, value)=> acc+value,0)
+console.log("reduce: ",out);
+
+//0 and 1 are the initial values which is stored in acc varible as soon as the progrma executes
+
+//reduce using function
+let out2= mynums.reduce(function (acc,value){
+    return acc+value
+},1)
+console.log("reduce: ",out2);

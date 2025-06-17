@@ -19,4 +19,3 @@ void display(struct my_datatype stud){
     printf("%d\n%.2f\n%s",stud.roll_no,stud.marks,stud.name);
 
 }
-

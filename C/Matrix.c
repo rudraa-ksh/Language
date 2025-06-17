@@ -2,7 +2,7 @@
 int main()
 {
     int arr[3][3],e;
-     printf("Enter the elements for matrix:\n");
+    printf("Enter the elements for matrix:\n");
     for(int x=0;x<3;x++){
         for(int y=0;y<3;y++){
             scanf("%d",&e);

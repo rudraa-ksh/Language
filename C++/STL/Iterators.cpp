@@ -8,8 +8,11 @@ int main(){
     }
     cout<<endl;
 
-    vector<int> ::iterator t = v.begin();
-    cout<<++*t;
+    vector<int> ::iterator t;    //Iterators are pointer based variables for looping through various containers.
+    for( t = v.begin(); t!= v.end(); t++){
+        cout<<*t<<" ";
+    }
+    cout<<endl;
 
     vector<pair<int, int>> v_p = {{1,2},{2,3},{3,4}};
     vector<pair<int, int>> ::iterator it = v_p.begin();
